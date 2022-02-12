@@ -4,7 +4,7 @@
         <ion-card class="speaker-card">
           <ion-card-header style="align-items: center; text-align: center; font-size: 16px; font-weight: 600; color: dimgrey; margin-top: 20px; margin-botom: 20px;">Enter the Truck ID or Scan QR Code</ion-card-header>
           <ion-card-content class="first-step-content">
-            <form novalidate [formGroup] = "form" (ngSubmit)="ValidateTruckId(truckIdentifier)">
+            <form #myForm="ngForm" novalidate [formGroup] = "form"  (ngSubmit)="ValidateTruckId(truckIdentifier)">
             <ion-item>
               <ion-input type="text" placeholder="Truck ID" [(ngModel)]='truckIdentifier' formControlName="truckId"></ion-input>
               <ion-icon item-end name="camera-outline" (click)="scanBarcode()"></ion-icon>

@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { ApiService } from './../../api.services';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ConferenceData } from '../../providers/conference-data';
 import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner/ngx';
 import { NavController } from '@ionic/angular';
@@ -13,6 +13,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./speaker-list.scss'],
 })
 export class SpeakerListPage {
+  @ViewChild('myForm') myForm : ElementRef;
   scannedData: any;
   encodedData: '';
   encodeData: any;
@@ -67,7 +68,9 @@ export class SpeakerListPage {
     this.barcodeScanner.scan(options).then(barcodeData => {
       console.log('Barcode data', barcodeData);
       this.scannedData = barcodeData;
-
+      this.truckIdentifier=barcodeData.text;
+      this.myForm.nativeElement.submit();
+      
     }).catch(err => {
       console.log('Error', err);
     });

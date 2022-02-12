@@ -261,20 +261,25 @@
 
   "map": [
     {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.38012,
+      "name": "3415 Lumber Rd, Springfield, IL 62707",
+      "lat": 39.83026218354583,
+      "lng": -89.5911920072629,
       "center": true
     },
     {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
+      "name": "1405 W Kenyon Rd, Urbana, IL 61801",
+      "lat": 40.13442380356124,
+      "lng": -88.22908787220011
     },
     {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
+      "name": "2310 N Monroe St, Albany, GA 31701",
+      "lat": 31.60620544879914,
+      "lng": -84.15998416890338
+    },
+    {
+      "name": "2001 Eagle Rd, Normal, IL 61761",
+      "lat": 40.54122466549664,
+      "lng": -88.99392290698957
     }
   ],
 

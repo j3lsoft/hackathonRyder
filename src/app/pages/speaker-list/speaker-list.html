@@ -1,0 +1,20 @@
+
+
+<ion-content class="firs_step" fullscreen="true">
+        <ion-card class="speaker-card">
+          <ion-card-header style="align-items: center; text-align: center; font-size: 16px; font-weight: 600; color: dimgrey; margin-top: 20px; margin-botom: 20px;">Enter the Truck ID or Scan QR Code</ion-card-header>
+          <ion-card-content class="first-step-content">
+            <form novalidate [formGroup] = "form" (ngSubmit)="ValidateTruckId(truckIdentifier)">
+            <ion-item>
+              <ion-input type="text" placeholder="Truck ID" [(ngModel)]='truckIdentifier' formControlName="truckId"></ion-input>
+              <ion-icon item-end name="camera-outline" (click)="scanBarcode()"></ion-icon>
+            </ion-item>
+            <div class="no-vehicle-found" id="errorlabel" *ngIf="inError">We couldn't find any vehicle with that id</div>
+            <div style="margin-top: 30px;">
+              <ion-button type="submit" class="extend-button" expand="block" shape="round">BEGIN</ion-button>
+            </div>
+            
+          </form>
+          </ion-card-content>
+        </ion-card>
+</ion-content>
